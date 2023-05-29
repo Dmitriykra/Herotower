@@ -9,11 +9,8 @@ public class TargetLocation : MonoBehaviour
     [SerializeField] ParticleSystem projectletileParticles;
 
     Transform target;
-    float range  = 15f;
-    // Start is called before the first frame update
+    float range  = 25f;
     
-
-    // Update is called once per frame
     void Update()
     {
         FindClosestEnemy();

@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using TMPro;
 
 public class Bank : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI goldBalance;
-    [SerializeField] int startingBalanc = 100;
+    [SerializeField] int startingBalanc = 150;
     [SerializeField] int currentBalance;
+    [SerializeField] GameState gameState;
 
     //create property to get int currentBalance from enother scripts;
     public int GetCurrentBalance{ get { return currentBalance; } }
@@ -32,15 +32,11 @@ public class Bank : MonoBehaviour
         goldBalance.text = "Gold: " + currentBalance.ToString();
 
         if(currentBalance < 0){
-            //lose game
-            ReloadScene();
+            gameState.LoseGame();
+        } 
+        
+        if (currentBalance >= 500){
+            gameState.WinGame();
         }
-    }
-
-    void ReloadScene(){
-        //получаем текущую сцену
-        Scene curretScene = SceneManager.GetActiveScene();
-        //перезагружаемэту текущую сцену по индексу
-        SceneManager.LoadScene(curretScene.buildIndex);
     }
 }
