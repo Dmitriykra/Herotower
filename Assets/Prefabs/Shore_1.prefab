@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2551459973006143472}
+  - component: {fileID: 2351084967196187754}
   m_Layer: 0
   m_Name: Shore_1
   m_TagString: Untagged
@@ -26,11 +27,27 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3105424776150490792}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2351084967196187754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2892238945886205258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb83e45c01814767ae616cf7afd8c55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlaceble: 0
+  balistaTower: {fileID: -6233776601165163469, guid: b1ff03cd00a95479687f8d3b3938224a,
+    type: 3}
 --- !u!1 &6174013010189454739
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,6 +76,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 6.25, y: 6.25, z: 6.25}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2551459973006143472}
   m_RootOrder: 0
@@ -82,6 +100,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1

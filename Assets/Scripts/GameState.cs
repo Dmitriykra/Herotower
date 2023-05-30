@@ -9,11 +9,27 @@ public class GameState : MonoBehaviour
     [SerializeField] GameObject loseScreen;
     [SerializeField] GameObject winScreen;
     [SerializeField] GameObject pauseScreen;
+    [SerializeField] GameObject startScreen;
+
+    private void Awake()
+    {
+        LoadingScreen();
+    }
+    void LoadingScreen(){
+        Time.timeScale = 0;
+        startScreen.SetActive(true);
+    }
+    public void StartScreen(){
+        startScreen.SetActive(false);
+        Time.timeScale = 1;
+    }
+
 
     public void RestartGame(){
         loseScreen.SetActive(false);
         winScreen.SetActive(false);
         pauseScreen.SetActive(false);
+        startScreen.SetActive(false);
 
         Time.timeScale = 1;
         //получаем текущую сцену
@@ -38,8 +54,7 @@ public class GameState : MonoBehaviour
         } else {
             pauseScreen.SetActive(true);
             Time.timeScale = 0;
-        }
-        
+        } 
     }
 
     public void ReturnGame(){

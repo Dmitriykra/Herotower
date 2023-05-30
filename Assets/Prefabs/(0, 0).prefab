@@ -101,7 +101,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 11:0
+  m_text: 8:0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -282,6 +282,7 @@ GameObject:
   - component: {fileID: 3875476176793305153}
   - component: {fileID: 1103036199}
   - component: {fileID: 1294660405}
+  - component: {fileID: 1749559405}
   m_Layer: 0
   m_Name: (0, 0)
   m_TagString: Untagged
@@ -335,6 +336,21 @@ MonoBehaviour:
   balistaTower: {fileID: -6233776601165163469, guid: b1ff03cd00a95479687f8d3b3938224a,
     type: 3}
 --- !u!114 &1294660405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7182270678159097574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb83e45c01814767ae616cf7afd8c55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlaceble: 0
+  balistaTower: {fileID: -6233776601165163469, guid: b1ff03cd00a95479687f8d3b3938224a,
+    type: 3}
+--- !u!114 &1749559405
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -18,6 +18,11 @@ public class Bank : MonoBehaviour
         currentBalance = startingBalanc;
         goldBalance.text = "Gold: " + currentBalance.ToString();
     }
+    private void Update() {
+        if (currentBalance >= 600){
+            gameState.WinGame();
+        }
+    }
     public void Deposit(int amount){
 
         //вернуть всегда позитивное значение числа (модуль) c Mathf.Abs
@@ -35,8 +40,6 @@ public class Bank : MonoBehaviour
             gameState.LoseGame();
         } 
         
-        if (currentBalance >= 500){
-            gameState.WinGame();
-        }
+        
     }
 }
